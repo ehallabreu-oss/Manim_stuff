@@ -1,0 +1,6 @@
+# Ignore Manim media output
+media/
+
+# Python cache files
+__pycache__/
+*.pyc
