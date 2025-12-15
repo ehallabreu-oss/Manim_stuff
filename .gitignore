@@ -1,6 +1,9 @@
 # Ignore Manim media output
 media/
 
+#ignore virtual environment
+manim_env312/
+
 # Python cache files
 __pycache__/
 *.pyc
