@@ -33,6 +33,20 @@ class FittingObjects(Scene):
         self.play(circle.animate.set_width(1))
         self.play(Transform(circle, triangle), run_time=5)
 
+# make a red triangle in the bottom left corner, 
+# move it to the center and morph it into a circle
+
+class Exercise(Scene):
+    def construct(self):
+        triangle = Triangle(stroke_width=3, stroke_color=RED)
+        triangle.set_height(3).shift(DOWN*3+LEFT*3)
+        square = Square(stroke_width=3, stroke_color=RED)
+        square.set_height(3)
+
+        self.play(FadeIn(triangle))
+        self.play(triangle.animate.shift(UP*3+RIGHT*3))
+        self.play(Transform(triangle, square), run_time=3)
+
 class Updaters(Scene):
     def construct(self):
 
@@ -50,6 +64,8 @@ class Updaters(Scene):
         self.wait()
         mathtext.clear_updaters()
         self.play(rectangle.animate.shift(LEFT*2 + UP*1), run_time=6)
+
+
 
 class ValueTracking(Scene):
     def construct(self):
